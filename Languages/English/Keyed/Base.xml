@@ -5,6 +5,7 @@
     <rtd.prefs.reload_required>Reloading the current map is required for changes to take effect.</rtd.prefs.reload_required>
     <rtd.prefs.ticks_to_action.label>Seconds before the wall changes state: </rtd.prefs.ticks_to_action.label>
     <rtd.prefs.power_consumed.label>Power consumed while the walls are changing states: </rtd.prefs.power_consumed.label>
+    <rtd.prefs.console_required.label>Require a manned utility console when changing states</rtd.prefs.console_required.label>
 
     <!-- Gameplay commands -->
     <CommandRtdLowerLabel>Lower</CommandRtdLowerLabel>

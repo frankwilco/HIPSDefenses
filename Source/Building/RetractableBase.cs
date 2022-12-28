@@ -16,6 +16,7 @@ namespace SubWall
         public int progressTick;
         public int ticksToAction = 360;
         public bool IsPowered => powerComp.PowerOn;
+        public bool IsConsoleSatisfied => MannedConsole != null || !SubWall_Mod.Settings.consoleRequired;
 
         public UtilityConsole MannedConsole => PowerComp?.PowerNet?.powerComps?.Select(x => x.parent)
             .OfType<UtilityConsole>().FirstOrDefault(x => x.Manned);
@@ -73,12 +74,12 @@ namespace SubWall
                     actionWaiting = true;
                     powerComp.PowerOutput = -powerAction;
                 },
-                disabled = MannedConsole == null || !IsPowered || actionWaiting
+                disabled = !IsConsoleSatisfied || !IsPowered || actionWaiting
             };
 
             if (commandAction.disabled)
             {
-                if (MannedConsole == null)
+                if (!IsConsoleSatisfied)
                 {
                     commandAction.disabledReason = "MessageRtdMannedUtilityConsole".Translate();
                 }
