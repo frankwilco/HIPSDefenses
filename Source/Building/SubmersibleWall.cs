@@ -26,30 +26,6 @@ namespace SubWall
             powerAction = SubWall_Mod.Settings.powerAction;
         }
 
-        // for debug inspect
-        /*
-       public override string GetInspectString()
-       {
-           StringBuilder stringBuilder = new StringBuilder();
-           string baseString = base.GetInspectString();
-           if (!baseString.NullOrEmpty())
-           {
-               stringBuilder.Append(baseString);
-               stringBuilder.AppendLine();
-           }
-           stringBuilder.Append("ticksToAction: " + ticksToAction.ToString());
-           stringBuilder.AppendLine();
-           stringBuilder.Append("powerAction: " + powerAction.ToString());
-           stringBuilder.AppendLine();
-           //stringBuilder.Append("PowerOutput: " + powerComp.PowerOutput);
-           //stringBuilder.AppendLine();
-           //stringBuilder.Append("basePowerConsumption: " + powerComp.PowerOutput);
-           //stringBuilder.AppendLine();
-           stringBuilder.Append("powerComp: " + powerComp.PowerOn);
-
-           return stringBuilder.ToString().TrimEndNewlines();
-       }
-       */
         public void DoProgress(int progress)
         {
             MoteMaker.ThrowText(this.TrueCenter(), Map, (progress + 60).TicksToSeconds().ToString(), 1f);
@@ -68,8 +44,31 @@ namespace SubWall
             building.ChangePaint(PaintColorDef);
             GenSpawn.Spawn(building, Position, Map, Rotation);
         }
-    }
 
+#if DEBUG
+        public override string GetInspectString()
+        {
+            StringBuilder stringBuilder = new StringBuilder();
+            string baseString = base.GetInspectString();
+            if (!baseString.NullOrEmpty())
+            {
+                stringBuilder.Append(baseString);
+                stringBuilder.AppendLine();
+            }
+            stringBuilder.Append("ticksToAction: " + ticksToAction.ToString());
+            stringBuilder.AppendLine();
+            stringBuilder.Append("powerAction: " + powerAction.ToString());
+            stringBuilder.AppendLine();
+            //stringBuilder.Append("PowerOutput: " + powerComp.PowerOutput);
+            //stringBuilder.AppendLine();
+            //stringBuilder.Append("basePowerConsumption: " + powerComp.PowerOutput);
+            //stringBuilder.AppendLine();
+            stringBuilder.Append("powerComp: " + powerComp.PowerOn);
+
+            return stringBuilder.ToString().TrimEndNewlines();
+        }
+#endif
+    }
 
     //Medieval Tech
 }
