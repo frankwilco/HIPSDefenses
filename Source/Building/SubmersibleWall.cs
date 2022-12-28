@@ -38,6 +38,7 @@ namespace SubWall
             Building building = ThingMaker.MakeThing(def, Stuff) as Building;
             building.SetFaction(Faction);
             building.ChangePaint(PaintColorDef);
+            building.HitPoints = HitPoints;
             GenSpawn.Spawn(building, Position, Map, Rotation);
         }
 
