@@ -23,18 +23,10 @@ namespace SubWall
             {
                 progressTick = 0;
                 actionWaiting = false;
-                Surface();
+                ReplaceWith(SurfacedWall.Def);
             }
 
             base.Tick();
-        }
-
-        private void Surface()
-        {
-            var building = (Building)ThingMaker.MakeThing(SurfacedWall.Def, Stuff);
-            building.SetFaction(Faction);
-            building.ChangePaint(PaintColorDef);
-            GenSpawn.Spawn(building, Position, Map, Rotation);
         }
 
         public override IEnumerable<Gizmo> GetGizmos()

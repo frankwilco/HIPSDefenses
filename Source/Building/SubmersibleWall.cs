@@ -60,6 +60,14 @@ namespace SubWall
             actionWaiting = true;
             powerComp.PowerOutput = -powerAction;
         }
+
+        protected void ReplaceWith(ThingDef def)
+        {
+            Building building = ThingMaker.MakeThing(def, Stuff) as Building;
+            building.SetFaction(Faction);
+            building.ChangePaint(PaintColorDef);
+            GenSpawn.Spawn(building, Position, Map, Rotation);
+        }
     }
 
 

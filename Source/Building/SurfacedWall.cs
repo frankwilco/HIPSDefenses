@@ -23,18 +23,10 @@ namespace SubWall
             {
                 progressTick = 0;
                 actionWaiting = false;
-                Submerge();
+                ReplaceWith(SubmersedWall.Def);
             }
 
             base.Tick();
-        }
-
-        private void Submerge()
-        {
-            var building = (Building)ThingMaker.MakeThing(SubmersedWall.Def, Stuff);
-            building.SetFaction(Faction);
-            building.ChangePaint(PaintColorDef);
-            GenSpawn.Spawn(building, Position, Map, Rotation);
         }
 
         public override IEnumerable<Gizmo> GetGizmos()
