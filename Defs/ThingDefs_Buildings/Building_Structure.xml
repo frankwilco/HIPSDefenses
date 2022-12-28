@@ -51,7 +51,7 @@
 			</li>
 		</comps>
 		<researchPrerequisites>
-			<li>Hydraulics</li>
+			<li>Autodoors</li>
 		</researchPrerequisites>	
 	</ThingDef>
 
@@ -145,7 +145,7 @@
       <li>PlaceWorker_PreventInteractionSpotOverlap</li>
     </placeWorkers>
     <researchPrerequisites>
-      <li>Hydraulics</li>
+      <li>Autodoors</li>
     </researchPrerequisites>
     <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
   </ThingDef>
@@ -199,7 +199,7 @@
 		<blockLight>True</blockLight>
 		<tickerType>Normal</tickerType>
 		<researchPrerequisites>
-			<li>StrongHinges</li>
+			<li>Smithing</li>
 		</researchPrerequisites>	
 	</ThingDef>
 	
@@ -266,7 +266,7 @@
 		<blockLight>True</blockLight>
 		<tickerType>Normal</tickerType>
 		<researchPrerequisites>
-			<li>StrongHinges</li>
+			<li>Smithing</li>
 		</researchPrerequisites>	
 	</ThingDef>	
 	
