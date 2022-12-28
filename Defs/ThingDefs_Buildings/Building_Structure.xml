@@ -116,6 +116,7 @@
         <blockLight>true</blockLight>
         <blockWind>true</blockWind>
         <coversFloor>true</coversFloor>
+        <holdsRoof>true</holdsRoof>
         <staticSunShadowHeight>1.0</staticSunShadowHeight>
         <designationCategory>Structure</designationCategory>
         <uiOrder>2000</uiOrder>
