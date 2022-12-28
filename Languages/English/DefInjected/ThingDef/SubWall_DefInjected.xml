@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
     <!-- Industrial Tech -->
-    <SubmersibleWall.label>submersible wall</SubmersibleWall.label>
-    <SubmersibleWall.description>An impassable wall that submerges when commanded to.</SubmersibleWall.description>
-    <SubmersedWall.label>submerged wall</SubmersedWall.label>
-    <SubmersedWall.description>A passable submerged wall that surfaces when commanded to.</SubmersedWall.description>
+    <RetractableWall.label>retractable wall</RetractableWall.label>
+    <RetractableWall.description>A wall that can be lowered below ground.</RetractableWall.description>
+    <LoweredWall.label>submerged wall</LoweredWall.label>
+    <LoweredWall.description>A wall below ground that can be raised to the surface.</LoweredWall.description>
     <UtilityConsole.label>utility console</UtilityConsole.label>
     <UtilityConsole.description>Allows control over submersible walls connected to the power grid.</UtilityConsole.description>
     <!-- Medieval Tech -->

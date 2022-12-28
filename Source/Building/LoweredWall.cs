@@ -3,13 +3,13 @@ using Verse;
 
 namespace SubWall
 {
-    public class SubmersedWall : SubmersibleWall
+    public class LoweredWall : RetractableBase
     {
-        public static readonly ThingDef Def = ThingDef.Named("SubmersedWall");
+        public static readonly ThingDef Def = ThingDef.Named("LoweredWall");
 
         public override void Tick()
         {
-            DoTick(SurfacedWall.Def);
+            DoTick(RetractableWall.Def);
             base.Tick();
         }
 

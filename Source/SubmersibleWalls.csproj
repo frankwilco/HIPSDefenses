@@ -52,13 +52,13 @@
     <Compile Include="JobDrivers\JobDriver_ClosePort.cs" />
     <Compile Include="JobDrivers\JobDriver_OpenGate.cs" />
     <Compile Include="JobDrivers\JobDriver_OpenPort.cs" />
-    <Compile Include="Building\SubmersedWall.cs" />
-    <Compile Include="Building\SubmersibleWall.cs" />
+    <Compile Include="Building\LoweredWall.cs" />
+    <Compile Include="Building\RetractableBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Defs\SubWall_JobDefOf.cs" />
     <Compile Include="SubWall_Mod.cs" />
     <Compile Include="SubWall_ModSettings.cs" />
-    <Compile Include="Building\SurfacedWall.cs" />
+    <Compile Include="Building\RetractableWall.cs" />
     <Compile Include="Building\UtilityConsole.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

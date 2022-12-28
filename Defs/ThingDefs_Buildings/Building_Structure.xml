@@ -1,10 +1,87 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <ThingDef ParentName="Wall" Name="SubW_SubmersibleWall">
-        <defName>SubmersibleWall</defName>
-        <label>submersible wall</label>
-        <description>An impassable wall that submerges when commanded to.</description>
-        <thingClass>Subwall.SurfacedWall</thingClass>
+    <ThingDef ParentName="BuildingBase" Name="RetractableBase" Abstract="True">
+        <thingClass>RetractableBase</thingClass>
+        <category>Building</category>
+        <statBases>
+            <MaxHitPoints>300</MaxHitPoints>
+            <WorkToBuild>200</WorkToBuild>
+            <Flammability>1.0</Flammability>
+            <MeditationFocusStrength>0.22</MeditationFocusStrength>
+        </statBases>
+        <costStuffCount>5</costStuffCount>
+        <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>Impassable</passability>
+        <castEdgeShadows>true</castEdgeShadows>
+        <fillPercent>1</fillPercent>
+        <placingDraggableDimensions>1</placingDraggableDimensions>
+        <tickerType>Normal</tickerType>
+        <rotatable>false</rotatable>
+        <selectable>true</selectable>
+        <neverMultiSelect>false</neverMultiSelect>
+        <useStuffTerrainAffordance>true</useStuffTerrainAffordance>
+        <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+        <holdsRoof>false</holdsRoof>
+        <blockLight>true</blockLight>
+        <canOverlapZones>false</canOverlapZones>
+        <fertility>0</fertility>
+        <stuffCategories>
+            <li>Metallic</li>
+            <li>Woody</li>
+            <li>Stony</li>
+        </stuffCategories>
+        <building>
+            <paintable>true</paintable>
+            <isInert>true</isInert>
+            <isPlaceOverableWall>true</isPlaceOverableWall>
+            <ai_chillDestination>false</ai_chillDestination>
+            <blueprintGraphicData>
+                <texPath>Things/Building/Linked/Wall_Blueprint_Atlas</texPath>
+            </blueprintGraphicData>
+            <relatedBuildCommands>
+                <li>Wall</li>
+                <li>Door</li>
+                <li>Autodoor</li>
+            </relatedBuildCommands>
+        </building>
+        <costList>
+            <Steel>10</Steel>
+            <ComponentIndustrial>1</ComponentIndustrial>
+        </costList>
+        <comps>
+            <li Class="CompProperties_MeditationFocus">
+                <statDef>MeditationFocusStrength</statDef>
+                <focusTypes>
+                    <li>Minimal</li>
+                </focusTypes>
+            </li>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <basePowerConsumption>15</basePowerConsumption>
+                <transmitsPower>true</transmitsPower>
+            </li>
+        </comps>
+        <damageMultipliers>
+            <li>
+                <damageDef>Bomb</damageDef>
+                <multiplier>2</multiplier>
+            </li>
+            <li>
+                <damageDef>Thump</damageDef>
+                <multiplier>2</multiplier>
+            </li>
+        </damageMultipliers>
+        <researchPrerequisites>
+            <li>Autodoors</li>
+        </researchPrerequisites>
+    </ThingDef>
+
+    <ThingDef ParentName="RetractableBase">
+        <defName>RetractableWall</defName>
+        <label>retractable wall</label>
+        <description>A wall that can be lowered below ground.</description>
+        <thingClass>Subwall.RetractableWall</thingClass>
         <graphicData>
             <texPath>Things/Building/Linked/SubWall_Atlas</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -26,39 +103,20 @@
             </damageData>
         </graphicData>
         <uiIconPath>Things/Building/Linked/SubWallBricks_MenuIcon</uiIconPath>
-        <statBases>
-            <MaxHitPoints>300</MaxHitPoints>
-            <WorkToBuild>200</WorkToBuild>
-        </statBases>
         <pathCost>70</pathCost>
-        <costStuffCount>5</costStuffCount>
-        <costList>
-            <Steel>10</Steel>
-            <ComponentIndustrial>1</ComponentIndustrial>
-        </costList>
-        <passability>Impassable</passability>
+        <blockLight>true</blockLight>
         <blockWind>true</blockWind>
-        <holdsRoof>false</holdsRoof>
-        <neverMultiSelect>false</neverMultiSelect>
-        <blockLight>True</blockLight>
-        <tickerType>Normal</tickerType>
-        <comps>
-            <li Class="CompProperties_Power">
-                <compClass>CompPowerTrader</compClass>
-                <basePowerConsumption>15</basePowerConsumption>
-                <transmitsPower>true</transmitsPower>
-            </li>
-        </comps>
-        <researchPrerequisites>
-            <li>Autodoors</li>
-        </researchPrerequisites>
+        <coversFloor>true</coversFloor>
+        <staticSunShadowHeight>1.0</staticSunShadowHeight>
+        <designationCategory>Structure</designationCategory>
+        <uiOrder>2000</uiOrder>
     </ThingDef>
-    <ThingDef ParentName="SubW_SubmersibleWall">
-        <defName>SubmersedWall</defName>
-        <label>submerged wall</label>
-        <description>A passable submerged wall that surfaces when commanded to.</description>
-        <thingClass>Subwall.SubmersedWall</thingClass>
-        <designationCategory></designationCategory>
+
+    <ThingDef ParentName="RetractableBase">
+        <defName>LoweredWall</defName>
+        <label>lowered wall</label>
+        <description>A wall below ground that can be raised to the surface.</description>
+        <thingClass>Subwall.LoweredWall</thingClass>
         <graphicData>
             <texPath>Things/Building/Linked/SubWallSink_Atlas</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -66,7 +124,6 @@
             <linkType>CornerFiller</linkType>
             <linkFlags>
                 <li>Barricades</li>
-                <li>Rock</li>
             </linkFlags>
             <damageData>
                 <cornerTL>Damage/Corner</cornerTL>
@@ -83,12 +140,12 @@
         <pathCost>0</pathCost>
         <pathCostIgnoreRepeat>true</pathCostIgnoreRepeat>
         <passability>Standable</passability>
+        <blockLight>false</blockLight>
         <blockWind>false</blockWind>
-        <fillPercent>0</fillPercent>
         <coversFloor>false</coversFloor>
         <staticSunShadowHeight></staticSunShadowHeight>
-        <blockLight>false</blockLight>
     </ThingDef>
+
     <ThingDef ParentName="BuildingBase">
         <defName>UtilityConsole</defName>
         <label>utility console</label>

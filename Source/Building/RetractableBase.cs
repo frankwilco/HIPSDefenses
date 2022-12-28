@@ -8,7 +8,7 @@ using Verse;
 namespace SubWall
 {
     //Industrial Tech
-    public class SubmersibleWall : Building
+    public class RetractableBase : Building
     {
         public bool actionWaiting;
         public int powerAction = 150;
