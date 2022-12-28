@@ -83,9 +83,8 @@
         <description>A wall that can be lowered below ground.</description>
         <thingClass>Subwall.RetractableWall</thingClass>
         <graphicData>
-            <texPath>Things/Building/Linked/SubWall_Atlas</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
-            <shaderType>CutoutComplex</shaderType>
+            <texPath>Things/Building/Linked/RtdWall</texPath>
+            <graphicClass>Graphic_Appearances</graphicClass>
             <linkType>CornerFiller</linkType>
             <linkFlags>
                 <li>Wall</li>
@@ -102,7 +101,17 @@
                 <edgeRight>Damage/Edge</edgeRight>
             </damageData>
         </graphicData>
-        <uiIconPath>Things/Building/Linked/SubWallBricks_MenuIcon</uiIconPath>
+        <uiIconPath>Things/Building/Linked/RtdWallSmooth_MenuIcon</uiIconPath>
+        <uiIconPathsStuff>
+            <li>
+                <appearance>Planks</appearance>
+                <iconPath>Things/Building/Linked/RtdWallPlanks_MenuIcon</iconPath>
+            </li>
+            <li>
+                <appearance>Bricks</appearance>
+                <iconPath>Things/Building/Linked/RtdWallBricks_MenuIcon</iconPath>
+            </li>
+        </uiIconPathsStuff>
         <pathCost>70</pathCost>
         <blockLight>true</blockLight>
         <blockWind>true</blockWind>
@@ -118,7 +127,7 @@
         <description>A wall below ground that can be raised to the surface.</description>
         <thingClass>Subwall.LoweredWall</thingClass>
         <graphicData>
-            <texPath>Things/Building/Linked/SubWallSink_Atlas</texPath>
+            <texPath>Things/Building/Linked/RtdWallLow_Atlas</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <shaderType>CutoutComplex</shaderType>
             <linkType>CornerFiller</linkType>
@@ -136,7 +145,7 @@
                 <edgeRight>Damage/Edge</edgeRight>
             </damageData>
         </graphicData>
-        <uiIconPath>Things/Building/Linked/SubWallSink_MenuIcon</uiIconPath>
+        <uiIconPath>Things/Building/Linked/RtdWallLow_MenuIcon</uiIconPath>
         <pathCost>0</pathCost>
         <pathCostIgnoreRepeat>true</pathCostIgnoreRepeat>
         <passability>Standable</passability>
