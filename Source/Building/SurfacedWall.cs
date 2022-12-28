@@ -33,6 +33,7 @@ namespace SubWall
         {
             var building = (Building)ThingMaker.MakeThing(SubmersedWall.Def, Stuff);
             building.SetFaction(Faction);
+            building.ChangePaint(PaintColorDef);
             GenSpawn.Spawn(building, Position, Map, Rotation);
         }
 
