@@ -40,7 +40,7 @@ namespace SubWall
             {
                 defaultLabel = "SubWall_SubAction".Translate(),
                 defaultDesc = "SubWall_SubActionDesc".Translate(),
-                icon = ContentFinder<Texture2D>.Get("UI/SubWallBricks_MenuIcon", false),
+                icon = ContentFinder<Texture2D>.Get("UI/Designators/Sub", false),
                 action = PendAction
             };
             if (MannedConsole != null && IsPowered && !actionWaiting)
