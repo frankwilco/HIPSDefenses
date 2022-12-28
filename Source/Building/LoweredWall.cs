@@ -15,7 +15,7 @@ namespace SubWall
 
         public override IEnumerable<Gizmo> GetGizmos()
         {
-            return GetGizmosWithAction("Rise");
+            return GetGizmosWithAction("Raise");
         }
     }
 }

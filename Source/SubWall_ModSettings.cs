@@ -19,10 +19,10 @@ namespace SubWall.Settings
         {
             var listing_Standard = new Listing_Standard();
             listing_Standard.Begin(canvas);
-            listing_Standard.Label("SubWall_Changes".Translate());
-            listing_Standard.Label("SubWall_ticksToAction".Translate() + (ticksToAction / 60));
+            listing_Standard.Label("rtd.prefs.reload_required".Translate());
+            listing_Standard.Label("rtd.prefs.ticks_to_action.label".Translate() + (ticksToAction / 60));
             ticksToAction = (int)(listing_Standard.Slider(ticksToAction / 60, 1, 25) * 60);
-            listing_Standard.Label("SubWall_powerAction".Translate() + powerAction);
+            listing_Standard.Label("rtd.prefs.power_consumed.label".Translate() + powerAction);
             powerAction = (int)listing_Standard.Slider(powerAction, 15, 500);
             listing_Standard.End();
             SubWall_Mod.Settings.Write();

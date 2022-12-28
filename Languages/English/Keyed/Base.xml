@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+    <!-- Mod Settings -->
+    <rtd.prefs.title>Retractable Walls</rtd.prefs.title>
+    <rtd.prefs.reload_required>Reloading the current map is required for changes to take effect.</rtd.prefs.reload_required>
+    <rtd.prefs.ticks_to_action.label>Seconds before the wall changes state: </rtd.prefs.ticks_to_action.label>
+    <rtd.prefs.power_consumed.label>Power consumed while the walls are changing states: </rtd.prefs.power_consumed.label>
+
+    <!-- Gameplay commands -->
+    <CommandRtdLowerLabel>Lower</CommandRtdLowerLabel>
+    <CommandRtdLowerDesc>Lowers the wall below ground and allows passage.</CommandRtdLowerDesc>
+    <CommandRtdRaiseLabel>Raise</CommandRtdRaiseLabel>
+    <CommandRtdRaiseDesc>Raises the wall and blocks passage.</CommandRtdRaiseDesc>
+
+    <!-- Float menu -->
+    <OrderCloseThing>Close {1_labelShort}</OrderCloseThing>
+    <OrderRaiseThing>Raise {1_labelShort}</OrderRaiseThing>
+    <OrderLowerThing>Lower {1_labelShort}</OrderLowerThing>
+
+    <!-- Mote text -->
+    <MoteShut>Closed!</MoteShut>
+    <MoteOpen>Opened!</MoteOpen>
+
+    <!-- Messages -->
+    <MessageRtdMannedUtilityConsole>This action requires a manned utility console.</MessageRtdMannedUtilityConsole>
+    <MessageRtdNeedsPower>The retractable wall needs to be powered.</MessageRtdNeedsPower>
+    <MessageRtdPending>Action is in effect!</MessageRtdPending>
+</LanguageData>

@@ -15,7 +15,7 @@ namespace SubWall.Settings
 
         public override string SettingsCategory()
         {
-            return "SubWall_mod".Translate();
+            return "rtd.prefs.title".Translate();
         }
 
         public override void DoSettingsWindowContents(Rect inRect)

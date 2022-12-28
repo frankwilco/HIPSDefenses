@@ -65,9 +65,9 @@ namespace SubWall
         {
             var commandAction = new Command_Action
             {
-                defaultLabel = $"SubWall_{action}Action".Translate(),
-                defaultDesc = $"SubWall_{action}ActionDesc".Translate(),
-                icon = ContentFinder<Texture2D>.Get($"UI/Designators/{action}", false),
+                defaultLabel = $"CommandRtd{action}Label".Translate(),
+                defaultDesc = $"CommandRtd{action}Desc".Translate(),
+                icon = ContentFinder<Texture2D>.Get($"UI/Designators/Rtd{action}", false),
                 action = delegate
                 {
                     actionWaiting = true;
@@ -80,15 +80,15 @@ namespace SubWall
             {
                 if (MannedConsole == null)
                 {
-                    commandAction.disabledReason = "SubWall_MannedError".Translate();
+                    commandAction.disabledReason = "MessageRtdMannedUtilityConsole".Translate();
                 }
                 if (!IsPowered)
                 {
-                    commandAction.disabledReason = "SubWall_PowerError".Translate();
+                    commandAction.disabledReason = "MessageRtdNeedsPower".Translate();
                 }
                 if (actionWaiting)
                 {
-                    commandAction.disabledReason = "SubWall_PendError".Translate();
+                    commandAction.disabledReason = "MessageRtdPending".Translate();
                 }
             }
 
