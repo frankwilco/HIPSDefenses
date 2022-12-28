@@ -1,6 +1,8 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using RimWorld;
 using SubWall.Settings;
+using UnityEngine;
 using Verse;
 
 namespace SubWall
@@ -31,12 +33,6 @@ namespace SubWall
             MoteMaker.ThrowText(this.TrueCenter(), Map, (progress + 60).TicksToSeconds().ToString(), 1f);
         }
 
-        public void PendAction()
-        {
-            actionWaiting = true;
-            powerComp.PowerOutput = -powerAction;
-        }
-
         protected void ReplaceWith(ThingDef def)
         {
             Building building = ThingMaker.MakeThing(def, Stuff) as Building;
@@ -45,6 +41,67 @@ namespace SubWall
             GenSpawn.Spawn(building, Position, Map, Rotation);
         }
 
+        protected void DoTick(ThingDef def)
+        {
+            if (actionWaiting)
+            {
+                progressTick += 1;
+                if (progressTick % 60 == 0)
+                {
+                    DoProgress(ticksToAction - progressTick);
+                }
+            }
+
+            if (progressTick >= ticksToAction)
+            {
+                progressTick = 0;
+                actionWaiting = false;
+                ReplaceWith(def);
+            }
+        }
+
+        protected Gizmo GetWallGizmo(string action)
+        {
+            var commandAction = new Command_Action
+            {
+                defaultLabel = $"SubWall_{action}Action".Translate(),
+                defaultDesc = $"SubWall_{action}ActionDesc".Translate(),
+                icon = ContentFinder<Texture2D>.Get($"UI/Designators/{action}", false),
+                action = delegate
+                {
+                    actionWaiting = true;
+                    powerComp.PowerOutput = -powerAction;
+                },
+                disabled = MannedConsole == null || !IsPowered || actionWaiting
+            };
+
+            if (commandAction.disabled)
+            {
+                if (MannedConsole == null)
+                {
+                    commandAction.disabledReason = "SubWall_MannedError".Translate();
+                }
+                if (!IsPowered)
+                {
+                    commandAction.disabledReason = "SubWall_PowerError".Translate();
+                }
+                if (actionWaiting)
+                {
+                    commandAction.disabledReason = "SubWall_PendError".Translate();
+                }
+            }
+
+            return commandAction;
+        }
+
+        protected IEnumerable<Gizmo> GetGizmosWithAction(string action)
+        {
+            foreach (Gizmo gizmo in base.GetGizmos())
+            {
+                yield return gizmo;
+            }
+            yield return GetWallGizmo(action);
+        }
 #if DEBUG
         public override string GetInspectString()
         {
