@@ -36,7 +36,6 @@ namespace SubWall.Settings
             }
 
             listing_Standard.End();
-            SubWall_Mod.Settings.Write();
         }
     }
 }
