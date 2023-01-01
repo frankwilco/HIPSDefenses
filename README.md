@@ -1,4 +1,4 @@
-# Retractable Defenses
+# HIPS Defenses
 Adds various defenses that can control movement between spaces.
 
 Medival Tech Gates and Portcullises

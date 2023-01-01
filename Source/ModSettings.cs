@@ -3,7 +3,7 @@ using Verse;
 
 namespace SubWall.Settings
 {
-    internal class SubWall_ModSettings : ModSettings
+    internal class HipsDefensesModSettings : ModSettings
     {
         public int powerAction = 150;
         public int ticksToAction = 360;

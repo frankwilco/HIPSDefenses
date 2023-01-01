@@ -3,14 +3,14 @@ using Verse;
 
 namespace SubWall.Settings
 {
-    internal class SubWall_Mod : Mod
+    internal class HipsDefensesMod : Mod
     {
-        public static SubWall_ModSettings Settings;
+        public static HipsDefensesModSettings Settings;
 
-        public SubWall_Mod(ModContentPack content)
+        public HipsDefensesMod(ModContentPack content)
             : base(content)
         {
-            Settings = GetSettings<SubWall_ModSettings>();
+            Settings = GetSettings<HipsDefensesModSettings>();
         }
 
         public override string SettingsCategory()

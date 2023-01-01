@@ -16,7 +16,7 @@ namespace SubWall
         public int progressTick;
         public int ticksToAction = 360;
         public bool IsPowered => powerComp.PowerOn;
-        public bool IsConsoleSatisfied => MannedConsole != null || !SubWall_Mod.Settings.consoleRequired;
+        public bool IsConsoleSatisfied => MannedConsole != null || !HipsDefensesMod.Settings.consoleRequired;
 
         public UtilityConsole MannedConsole => PowerComp?.PowerNet?.powerComps?.Select(x => x.parent)
             .OfType<UtilityConsole>().FirstOrDefault(x => x.Manned);
@@ -25,8 +25,8 @@ namespace SubWall
         {
             base.SpawnSetup(map, respawningAfterLoad);
             powerComp = GetComp<CompPowerTrader>();
-            ticksToAction = SubWall_Mod.Settings.ticksToAction;
-            powerAction = SubWall_Mod.Settings.powerAction;
+            ticksToAction = HipsDefensesMod.Settings.ticksToAction;
+            powerAction = HipsDefensesMod.Settings.powerAction;
         }
 
         public void DoProgress(int progress)
