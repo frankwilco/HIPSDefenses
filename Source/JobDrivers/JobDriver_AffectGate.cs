@@ -2,7 +2,7 @@
 using RimWorld;
 using Verse.AI;
 
-namespace SubWall
+namespace FrankWilco.RimWorld
 {
     public abstract class JobDriver_AffectGate : JobDriver
     {

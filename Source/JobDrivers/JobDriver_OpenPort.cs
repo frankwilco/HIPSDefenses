@@ -1,7 +1,7 @@
 ﻿using RimWorld;
 using Verse;
 
-namespace SubWall
+namespace FrankWilco.RimWorld
 {
     public class JobDriver_OpenPort : JobDriver_AffectGate
     {

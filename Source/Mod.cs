@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using Verse;
 
-namespace SubWall.Settings
+namespace FrankWilco.RimWorld
 {
-    internal class HipsDefensesMod : Mod
+    public class HipsDefensesMod : Mod
     {
         public static HipsDefensesModSettings Settings;
 

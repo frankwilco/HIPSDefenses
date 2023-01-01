@@ -81,7 +81,7 @@
         <defName>RetractableWall</defName>
         <label>retractable wall</label>
         <description>A wall that can be lowered below ground.</description>
-        <thingClass>Subwall.RetractableWall</thingClass>
+        <thingClass>FrankWilco.RimWorld.RetractableWall</thingClass>
         <graphicData>
             <texPath>Things/Building/Linked/RtdWall</texPath>
             <graphicClass>Graphic_Appearances</graphicClass>
@@ -126,7 +126,7 @@
         <defName>LoweredWall</defName>
         <label>lowered wall</label>
         <description>A wall below ground that can be raised to the surface.</description>
-        <thingClass>Subwall.LoweredWall</thingClass>
+        <thingClass>FrankWilco.RimWorld.LoweredWall</thingClass>
         <graphicData>
             <texPath>Things/Building/Linked/RtdWallLow_Atlas</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -160,7 +160,7 @@
         <defName>UtilityConsole</defName>
         <label>utility console</label>
         <description>Allows control over submersible walls connected to the power grid.</description>
-        <thingClass>SubWall.UtilityConsole</thingClass>
+        <thingClass>FrankWilco.RimWorld.UtilityConsole</thingClass>
         <graphicData>
             <texPath>Things/Building/Security/UtilityConsole</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -218,7 +218,7 @@
         <defName>ClosedGate</defName>
         <label>closed gate</label>
         <description>A closed impassable heavy gate that requires a lot of work to open and close.</description>
-        <thingClass>Subwall.Gate</thingClass>
+        <thingClass>FrankWilco.RimWorld.Gate</thingClass>
         <graphicData>
             <texPath>Things/Building/Structure/Gate</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -283,7 +283,7 @@
         <defName>ClosedPortcullis</defName>
         <label>closed portcullis</label>
         <description>A closed impassable heavy portcullis that requires a lot of work to open but swift to close.</description>
-        <thingClass>Subwall.Gate</thingClass>
+        <thingClass>FrankWilco.RimWorld.Gate</thingClass>
         <graphicData>
             <texPath>Things/Building/Structure/Portcullis</texPath>
             <graphicClass>Graphic_Single</graphicClass>

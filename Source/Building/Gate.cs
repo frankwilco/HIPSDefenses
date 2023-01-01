@@ -3,7 +3,7 @@ using RimWorld;
 using Verse;
 using Verse.AI;
 
-namespace SubWall
+namespace FrankWilco.RimWorld
 {
     public class Gate : Building
     {

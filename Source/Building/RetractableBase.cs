@@ -1,11 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using RimWorld;
-using SubWall.Settings;
 using UnityEngine;
 using Verse;
 
-namespace SubWall
+namespace FrankWilco.RimWorld
 {
     //Industrial Tech
     public class RetractableBase : Building

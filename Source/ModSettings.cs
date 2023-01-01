@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using Verse;
 
-namespace SubWall.Settings
+namespace FrankWilco.RimWorld
 {
-    internal class HipsDefensesModSettings : ModSettings
+    public class HipsDefensesModSettings : ModSettings
     {
         public int powerAction = 150;
         public int ticksToAction = 360;
