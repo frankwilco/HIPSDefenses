@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef ParentName="BuildingBase">
+        <defName>UtilityConsole</defName>
+        <label>utility console</label>
+        <description>Allows control over submersible walls connected to the power grid.</description>
+        <thingClass>FrankWilco.RimWorld.UtilityConsole</thingClass>
+        <graphicData>
+            <texPath>Things/Building/Security/UtilityConsole</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(3,2)</drawSize>
+            <damageData>
+                <rect>(0,0,1.8,0.9)</rect>
+                <cornerBL>Damage/Corner</cornerBL>
+                <cornerBR>Damage/Corner</cornerBR>
+            </damageData>
+        </graphicData>
+        <castEdgeShadows>true</castEdgeShadows>
+        <staticSunShadowHeight>0.20</staticSunShadowHeight>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <pathCost>70</pathCost>
+        <blockWind>true</blockWind>
+        <fillPercent>0.5</fillPercent>
+        <canOverlapZones>false</canOverlapZones>
+        <statBases>
+            <MaxHitPoints>150</MaxHitPoints>
+            <WorkToBuild>1000</WorkToBuild>
+            <Flammability>0.6</Flammability>
+        </statBases>
+        <size>(3,2)</size>
+        <costList>
+            <Steel>100</Steel>
+            <ComponentIndustrial>4</ComponentIndustrial>
+            <ComponentSpacer>1</ComponentSpacer>
+        </costList>
+        <defaultPlacingRot>North</defaultPlacingRot>
+        <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+        <hasInteractionCell>true</hasInteractionCell>
+        <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+        <designationCategory>Security</designationCategory>
+        <comps>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <shortCircuitInRain>true</shortCircuitInRain>
+                <basePowerConsumption>75</basePowerConsumption>
+            </li>
+            <li Class="CompProperties_Flickable"/>
+            <li Class="CompProperties_Breakdownable"/>
+            <li Class="CompProperties_Mannable"/>
+        </comps>
+        <placeWorkers>
+            <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+        </placeWorkers>
+        <researchPrerequisites>
+            <li>Autodoors</li>
+        </researchPrerequisites>
+        <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    </ThingDef>
+</Defs>
