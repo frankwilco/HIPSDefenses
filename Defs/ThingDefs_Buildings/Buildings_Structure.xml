@@ -153,7 +153,8 @@
         <blockLight>false</blockLight>
         <blockWind>false</blockWind>
         <coversFloor>false</coversFloor>
-        <staticSunShadowHeight></staticSunShadowHeight>
+        <staticSunShadowHeight>0</staticSunShadowHeight>
+        <castEdgeShadows>false</castEdgeShadows>
     </ThingDef>
 
     <!--Medieval Tech-->
