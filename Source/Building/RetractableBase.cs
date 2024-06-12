@@ -73,10 +73,10 @@ namespace FrankWilco.RimWorld
                     actionWaiting = true;
                     powerComp.PowerOutput = -powerAction;
                 },
-                disabled = !IsConsoleSatisfied || !IsPowered || actionWaiting
+                Disabled = !IsConsoleSatisfied || !IsPowered || actionWaiting
             };
 
-            if (commandAction.disabled)
+            if (commandAction.Disabled)
             {
                 if (!IsConsoleSatisfied)
                 {
