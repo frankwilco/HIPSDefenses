@@ -31,20 +31,6 @@
             <li>Woody</li>
             <li>Stony</li>
         </stuffCategories>
-        <building>
-            <paintable>true</paintable>
-            <isInert>true</isInert>
-            <isPlaceOverableWall>true</isPlaceOverableWall>
-            <ai_chillDestination>false</ai_chillDestination>
-            <blueprintGraphicData>
-                <texPath>Things/Building/Linked/Wall_Blueprint_Atlas</texPath>
-            </blueprintGraphicData>
-            <relatedBuildCommands>
-                <li>Wall</li>
-                <li>Door</li>
-                <li>Autodoor</li>
-            </relatedBuildCommands>
-        </building>
         <costList>
             <Steel>10</Steel>
             <ComponentIndustrial>1</ComponentIndustrial>
@@ -120,6 +106,21 @@
         <staticSunShadowHeight>1.0</staticSunShadowHeight>
         <designationCategory>Structure</designationCategory>
         <uiOrder>2000</uiOrder>
+        <building>
+            <paintable>true</paintable>
+            <isInert>true</isInert>
+            <isPlaceOverableWall>true</isPlaceOverableWall>
+            <ai_chillDestination>false</ai_chillDestination>
+            <supportsWallAttachments>true</supportsWallAttachments>
+            <blueprintGraphicData>
+                <texPath>Things/Building/Linked/Wall_Blueprint_Atlas</texPath>
+            </blueprintGraphicData>
+            <relatedBuildCommands>
+                <li>Wall</li>
+                <li>Door</li>
+                <li>Autodoor</li>
+            </relatedBuildCommands>
+        </building>
     </ThingDef>
 
     <ThingDef ParentName="RetractableBase">
@@ -156,6 +157,20 @@
         <coversFloor>false</coversFloor>
         <staticSunShadowHeight>0</staticSunShadowHeight>
         <castEdgeShadows>false</castEdgeShadows>
+        <building>
+            <paintable>true</paintable>
+            <isInert>true</isInert>
+            <isPlaceOverableWall>true</isPlaceOverableWall>
+            <supportsWallAttachments>false</supportsWallAttachments>
+            <blueprintGraphicData>
+                <texPath>Things/Building/Linked/Wall_Blueprint_Atlas</texPath>
+            </blueprintGraphicData>
+            <relatedBuildCommands>
+                <li>Wall</li>
+                <li>Door</li>
+                <li>Autodoor</li>
+            </relatedBuildCommands>
+        </building>
     </ThingDef>
 
     <!--Medieval Tech-->
