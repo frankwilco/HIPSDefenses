@@ -152,6 +152,7 @@
         <passability>Standable</passability>
         <blockLight>false</blockLight>
         <blockWind>false</blockWind>
+        <blockWeather>true</blockWeather>
         <coversFloor>false</coversFloor>
         <staticSunShadowHeight>0</staticSunShadowHeight>
         <castEdgeShadows>false</castEdgeShadows>
