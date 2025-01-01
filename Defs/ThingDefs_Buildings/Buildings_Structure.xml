@@ -119,6 +119,7 @@
                 <li>Wall</li>
                 <li>Door</li>
                 <li>Autodoor</li>
+                <li MayRequire="Ludeon.RimWorld.Anomaly">SecurityDoor</li>
             </relatedBuildCommands>
         </building>
     </ThingDef>
@@ -166,9 +167,11 @@
                 <texPath>Things/Building/Linked/Wall_Blueprint_Atlas</texPath>
             </blueprintGraphicData>
             <relatedBuildCommands>
+                <li>RetractableWall</li>
                 <li>Wall</li>
                 <li>Door</li>
                 <li>Autodoor</li>
+                <li MayRequire="Ludeon.RimWorld.Anomaly">SecurityDoor</li>
             </relatedBuildCommands>
         </building>
     </ThingDef>
