@@ -151,6 +151,7 @@
         <uiIconPath>Things/Building/Linked/RtdWallLow_MenuIcon</uiIconPath>
         <pathCost>0</pathCost>
         <pathCostIgnoreRepeat>true</pathCostIgnoreRepeat>
+        <fillPercent>0</fillPercent>
         <passability>Standable</passability>
         <blockLight>false</blockLight>
         <blockWind>false</blockWind>
