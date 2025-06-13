@@ -7,7 +7,7 @@ namespace FrankWilco.RimWorld
     {
         public static readonly ThingDef Def = ThingDef.Named("RetractableWall");
 
-        public override void Tick()
+        protected override void Tick()
         {
             DoTick(LoweredWall.Def);
             base.Tick();
